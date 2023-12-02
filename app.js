@@ -1,19 +1,10 @@
-// Шаблонные строки
+// Boolean False
 
-const projectName = 'Site shop';
-const price = 2000;
-const author = 'Vasilij Pupkin';
-const template = author + ' заказал ' + projectName + ' по цене ' + price + '$';
-console.log(template); 
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
 
 
-const template2 = `${author} заказал ${projectName} по цене ${price}$`;
-console.log(template2); 
-
-const template3 = 'Project \n' + 'Price: ' + price + '$';
-console.log(template3);
-
-const template4 = `Project
-Price: ${price}$`
-console.log(template4);
 
