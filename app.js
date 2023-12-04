@@ -1,10 +1,9 @@
-// Boolean False
+const money = 100;
+const canBuy = money > 50;
 
-console.log(Boolean(0));
-console.log(Boolean(''));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(NaN));
+ if (canBuy) {
+    console.log('Может купить наш продукт');
+ } else {
+    console.log('Не хватает баланса');
 
-
-
+ }
