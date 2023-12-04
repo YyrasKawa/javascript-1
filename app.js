@@ -1,24 +1,18 @@
-const moneyBank = 12000 * (1 + 0.07 / 12) ** 24;
-const costHouse = 13500;
+const secretNumber = 7;
 
-if (moneyBank >= costHouse) {
-    console.log(`Вася сможет купить дом за ${costHouse}$`)
-} else {
-    console.log(`Вася не сможет купить дом за ${costHouse}$`);
+if (secretNumber === 7) {
+    console.log('Угадал строго')
 }
 
 
-console.log(`У Васи есть ${moneyBank}$`);
+if (Number(secretNumber) == 7) {
+  console.log("Угадал не строго");
+}
 
-// -------------------------------
 
-const deposit = 12000;
-const rate = 0.07; 
-const depositLength = 24;
-const houseCost = 13500;
-const res = deposit * (1 + rate / 12) ** 24;
-if (res > houseCost) {
-    console.log(`Мы накопили: ${res}. Можем купить. Остаток ${res - houseCost}$`)
+const q = Number(prompt('Введите число'));
+if (q === 7) {
+    console.log('!')
 } else {
-    console.log(`Купить не сможем `)
+    console.log('Не угадал!'3);
 }
