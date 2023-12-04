@@ -1,27 +1,32 @@
-const role = 'manager';
+const bmwX3Price = 100000;
+const fordFocusPrice = 10000;
+const budget = 20000;
 
-if (role === 'manager') {
-  console.log("Manager");
-} else if (role === "admin") {
-  console.log("Admin");
-} else if (role === "ceo") {
-  console.log("CEO");
+let message;
+if (budget > bmwX3Price) {
+  message = "BMW";
+} else if (budget > fordFocusPrice) {
+  message = "Ford";
 } else {
-  console.log('Мы тебя не знаем');
+  message = "Bake";
 }
 
+console.log(`Я хочу купить ${message}`);
 
-switch (role) {
-    case 'manager': // role === 'manager'
-        console.log('Manager');
-        break;
-    case 'admin':
-        console.log('Admin');
-        break
-    case 'ceo':
-        console.log('CEO');
-        break;
-    default:
-        console.log("Мы тебя не знаем");
-     
+if (budget > bmwX3Price) {
+  message = "BMW";
+} else {
+  message = "Bake";
 }
+
+console.log(`Я хочу купить ${message}`);
+
+// Тернарные операторы
+
+const messagePay = budget > bmwX3Price ? `BMW` : `Bike`;
+console.log(`Я хочу капить ${messagePay}`)
+
+
+const messageCar =
+  budget > bmwX3Price ? 'BMW' : budget > fordFocusPrice ? `Ford` : `Bike`;
+console.log(`Я хочу капить ${messageCar}`);
