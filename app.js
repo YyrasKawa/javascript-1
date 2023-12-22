@@ -5,8 +5,6 @@ function powerOfTwo(num) {
 console.log(powerOfTwo(5));
 
 
-const poft = function (num) {
-    return num * num;
-}
+const poft = (num) => num * num;
 
 console.log(poft(6));
