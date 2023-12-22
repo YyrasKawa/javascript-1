@@ -33,17 +33,15 @@ function Remove(task) {
     if (index === -1) {
         return;
     }
-    tasks.splice(index, 1);
+    return tasks.splice(index, 1);
 }
 
 function Prioritize(task) {
-    const index = tasks.indexOf(task);
-    if (index === -1) {
-      return;
+    const result = Remove(task);
+    if (!result) {
+        return 
     }
-    const oldtask = tasks[index];
-    tasks.splice(oldtask, 1);
-    tasks.unshift(oldtask);
+    tasks.unshift(result[0]);
 }
 
 Add('task 2');
@@ -53,5 +51,5 @@ console.log(tasks);
 Remove('task 2');
 console.log(tasks);
 
-Prioritize('task 4');
+Prioritize('task 3');
 console.log(tasks);
