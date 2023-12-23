@@ -1,25 +1,13 @@
-const users = [
+const user = 
   {
     name: "Yury",
     surname: "Kavalenka",
-    age: 30,
-    skills: ["Development", "DevOps"],
-  },
-  {
-    name: "Yla",
-    surname: "Katasa",
-    age: 32,
-    skills: ["Design"],
-  },
-];
-
-const userData = users.map(user => {
-    return {
-        fullName: `${user.name} ${user.surname}`,
-        skillNum: user.skills.length
+    age: 24,
+    getFullName: function () {
+        return this.name + ' ' + this.surname;
     }
-})
+  };
 
-console.log(userData);
+  console.log(user.getFullName());
 
 
