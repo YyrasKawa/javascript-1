@@ -1,17 +1,21 @@
 const arr = [2, 4, 4, 10, 20];
 
-let elGT5;
-// for(const el of arr) {
-//     if (el > 5) {
-//         elGT5 = el;
-//         break;
+// function some(array, element) {
+//     if (array.find(el => el === element)) {
+//         return true;
+//     } else {
+//         return false;
 //     }
+
 // }
 
-// console.log(elGT5);
+// console.log(some(arr, 5));
 
-elGT5 = arr.find(el => el > 5);
-console.log(elGT5);
+function some(array, element) {
+    const res = array.find(el => el === element);
+    return res == undefined ? false : true;
+}
 
-elGT5Index = arr.findIndex((el) => el > 5);
-console.log(elGT5Index);
+console.log(some(arr, 0));
+
+console.log(arr.some(el => el === 0));
