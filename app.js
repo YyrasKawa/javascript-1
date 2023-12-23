@@ -1,17 +1,14 @@
-const url = 'https://purpleschool.ru/course/javascript';
+const arr = ['!', 'JS', 'love', 'I'];
+const newArr = [];
 
-// const res = url.split('/');
-// console.log(res);
+for (let i = arr.length -1; i >= 0; i--) {
+     newArr.push(arr[i]);
+     console.log(arr[i]);
+ }
 
 
-function getUrlParts(url) {
-    const [protocol, _, host, ...path] = url.split('/');
-    if (protocol === 'https:' || protocol === 'http:') {
-        console.log(protocol, _, host, path);
-        console.log(`Protocol: ${protocol.split(":")[0]}`);
-        console.log(`Host: ${host}`);
-        console.log(`Site wayl: /${path.join("/")}`);
-    }
-}
+ 
+ console.log(newArr);
+ const myString =   newArr.join(' ');
+ console.log(myString);
 
-getUrlParts(url);
