@@ -1,19 +1,12 @@
-const userArray = ['Yury', 'Kavalenka', 41];
-const user = {
-    name: 'Yury',
-    surname: 'Kavalenka',
-    age: 24,
-    skills: [
-        'Cooking',
-        'Development'
-    ]
-    
-}
+const users = [
+    { name: 'Yury', age:30},
+    { name: 'Mary', age:18},
+    { name: 'Lena', age:40},
+    { name: 'Sony', age:25},
+];
 
-console.log(user)
-console.log(user.name)
-console.log(user.skills[0]);
-console.log(user['skills']);
+console.log(users.sort((a, b) => a.age - b.age))
+
 
 
 
