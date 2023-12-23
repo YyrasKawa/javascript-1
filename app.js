@@ -1,83 +1,52 @@
-const operations = [1000, -700, 300, -500, 10000];
-const startingBalance = 100;
-
-function getBalance(arrayOfOperations, initailBalance) {
-    let balance = initailBalance;
-    for (const element of arrayOfOperations) {
-        balance += element;
-    }
-    return balance;
+function add(a, b) {
+    return a + b;
 }
 
-console.log(getBalance(operations, startingBalance));
-
-function checkOperations(arrayOfOperations, initailBalance) {
-    let balance = initailBalance;
-    let isOk = true;
-    for ( const element of arrayOfOperations) {
-        balance += element; 
-        if (balance < 0) {
-            isOk = false;
-            break
-        }
-    }
-    return isOk;
+function subtract(a, b) {
+    return a - b;
 }
 
-console.log(checkOperations(operations, startingBalance));
-
-function avarageOperations(arrayOfOperations) {
-    let positiveCount = 0;
-    let positiveSum = 0;
-    let negativeCount = 0;
-    let negativeSum = 0;
-    for (const element of arrayOfOperations) {
-        if (element > 0) {
-            positiveCount++;
-            positiveSum += element;
-        }
-        if (element < 0) {
-          negativeCount++;
-          negativeSum += element;
-        }
-  }
-  return [positiveSum / positiveCount, negativeSum / negativeCount]
-  
+function power(a, b) {
+    return a**b;
 }
 
-console.log(avarageOperations(operations));
+//  Функция вышего порядка
+function calculator(a, b, fn) {
+    console.log(fn.name);
+    const res = fn(a, b);
+    return res;
 
+}
 
+let res = calculator(3, 5, add);
+console.log(res);
+res = calculator(3, 5, subtract);
+console.log(res);
+res = calculator(3, 5, power);
+console.log(res);
 
+// Callback (обратный вызов) - это функция, которую вы передаете другой функции в качестве аргумента. Эта переданная функция будет выполнена (вызвана) после завершения выполнения определенной задачи или события.
 
+// Давайте рассмотрим простой пример на JavaScript:
 
+function doSomethingAsync(callback) {
+  // Предположим, что это асинхронная операция, например, загрузка данных из сети
+  setTimeout(function () {
+    console.log("Операция завершена!");
+    callback(); // Вызываем переданную функцию обратного вызова
+  }, 2000); // Задержка в 2 секунды, чтобы симулировать асинхронную операцию
+}
 
+function afterCallback() {
+  console.log("Обратный вызов выполнен!");
+}
 
+// Вызываем функцию doSomethingAsync и передаем afterCallback в качестве обратного вызова
+doSomethingAsync(afterCallback);
 
+// В этом примере:
 
-
-
-
-
-
-
-// const resultBalance = function(balance) {
-//     for (let element of operations) {
-//     balance = balance + element;
-//     if (balance < 0){
-//         console.log(`False ${balance}`)
-//     }
-//     }
-//     return balance
-// }
-// const balance = resultBalance(100);
-
-// console.log(resultBalance(100));
-// const midleBalanse = function(result) {
-//     for (let index in operations) {
-//         result = balance / index;
-//     }
-//     return result
-// }
-
-// console.log(midleBalanse(balance));
+// doSomethingAsync - это функция, которая выполняет асинхронную операцию (задержка на 2 секунды) и принимает функцию callback в качестве аргумента.
+// afterCallback - это функция, которая будет вызвана после завершения асинхронной операции.
+// Мы вызываем doSomethingAsync и передаем afterCallback в качестве обратного вызова.
+// Когда асинхронная операция завершится, функция afterCallback будет вызвана, и мы увидим вывод в консоли:
