@@ -1,14 +1,15 @@
-const transactionInUSD = [10, -7, 50, -10, 100];
+const prices = [[100, 200], [120, 100], [200, 350]];
 
-const transactionInRUB = [];
-for (const transaction of transactionInUSD) {
-    transactionInRUB.push(transaction * 60);
-}
+const positivePrice = prices
+.map(difference => difference[1] - difference[0] )
+.filter(positiv => positiv > 0);
 
-console.log(transactionInUSD);
-console.log(transactionInRUB);
 
-const transactionInRUB2 = transactionInUSD.map((transaction) => transaction * 60);
+console.log(positivePrice);
 
-console.log(transactionInUSD);
-console.log(transactionInRUB2);
+
+// const result = prices
+// .map(product => product[1] - product[0])
+// .filter(price => price > 0);
+
+// console.log(result);
