@@ -1,27 +1,23 @@
-'use strict';
+'use strict'
+// let, var, const, func, arguments
+// Scope chain
+//this
 
-const successMessge = 'Success';
-const user = {
-    name: 'Yury',
-    roles: []
+function sumNum(num1, num2) {
+    console.log(this);
+    console.log(arguments);
+    return num1 + num2;
 }
 
-function addRole(user, role) {
-    if (role == 'admin') {
-        const message = 'Mistake';
-        console.log(message);
-        return user;
-    }
-    user.roles.push(role);
-    console.log(successMessge);
+console.log(sumNum(1, 2, 3, 4));
 
-    function logRoles() {
-        console.log(user.roles);
-    }
-    logRoles();
-    return user;
+const sumNumArr = (num1, num2) => {
+    console.log(this);
+    console.log(arguments);
+    return num1 + num2;
 }
 
-console.log(addRole(user, 'dev'))
+console.log(sumNumArr(1, 4, 3, 7));
+
 
 
