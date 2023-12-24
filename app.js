@@ -1,27 +1,17 @@
-const arr = [1, 2, 3];
-const [z, y, x] = arr;
-console.log(y);
+const cities = {
+    msk: {
+        temp: {
+              celcius: 25
+        }
+    },
+    spb: {
 
-let user = {
-    name: 'Yury',
-    age: 41,
-    city: 'Warsaw'
-};
-
-const {age, ...userWithouAge} = user;
-console.log(age);
-console.log(userWithouAge); 
-
-const additinalData = {
-    skills: ['Development', 'Design'],
-    creditCard: '2342-2345-2734-2356'
-};
-
-// user.skills = additinalData.skills;
-
-user = {
-    ...user,
-    ...additinalData
+    }
 }
 
-console.log(user);
+const city = 'spb';
+if (cities[city] != undefined && cities[city].temp != undefined) {
+    console.log(cities[city].temp.celcius);
+}
+
+console.log(cities[city]?.temp?.celcius);
