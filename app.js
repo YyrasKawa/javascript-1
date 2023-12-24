@@ -20,9 +20,11 @@ function inputChaged(e) {
   }
 }
 
-// console.log(document.querySelector(".one").innerText);
-// console.log(document.querySelector(".one ~ div").innerText);
-
-console.log(document.querySelectorAll('.one')[0].innerText);
-console.log(document.querySelector("#two").innerText);
-console.log(document.querySelector("[user-id='4']").innerText);
+const panelText = "Панель";
+const panelClass = 'button';
+ const newElement = document.createElement('div');
+ newElement.setAttribute('user-id', 1);
+ newElement.classList.add('panel')
+//  newElement.innerText = 'Button';
+newElement.innerHTML = `<button class="${panelClass}">${panelText}</but`;
+ document.querySelector('.test').appendChild(newElement); 
