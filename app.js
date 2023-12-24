@@ -1,26 +1,28 @@
-'use strict'
+"use strict";
 
-const userInfo = {
-    balance: 0,
-    operations: 0,
-    increse(sum) {
-        this.balance +=sum;
-        this.operations++;
-    }
+// document.querySelector('.button').addEventListener('click', function() {
+//     const input = document.querySelector('.input').value;
+//     if (!input) {
+//         return;
+//     }
+//     document.querySelector('.panel').innerText = input;
+//     document.querySelector('.input').value = '';
+// });
+
+function submitForm() {
+  const input = document.querySelector(".input").value;
+  if (!input) {
+    return;
+  }
+  document.querySelector(".panel").innerText = input;
+  document.querySelector(".input").value = "";
+  document
+    .querySelector(".notification")
+    .classList.remove("notification_hidden");
 }
 
-function user() {
-    const userObj = userInfo;
-    return function() {
-        return userObj;
-    }
-}
-
-const user1 = user();
-user1().increse(100);
-user1().increse(100);
-console.log(user1());
-
-
-
-
+function inputChaged(e) {
+  if (e.code == "Enter") {
+    submitForm();
+  }
+};
