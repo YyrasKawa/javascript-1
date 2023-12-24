@@ -1,13 +1,18 @@
 'use strict'
 
-// IIFE
-
-function init() {
-    console.log('Start');
+function changeBalance() {
+    let balance = 0;
+    return function(sum) {
+        balance += sum;
+        console.log(`Баланс: ${balance}`)
+    }
 }
-init();
 
-(function() {
-    console.log('Start IIFO')
-})();
+const change = changeBalance(); 
+change(100);
+change(-50);
+change(200);
+
+
+
 
