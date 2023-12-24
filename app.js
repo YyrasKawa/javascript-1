@@ -1,18 +1,27 @@
+'use strict';
+
+const successMessge = 'Success';
 const user = {
-    name: 'Anton',
-    id: 1
-};
+    name: 'Yury',
+    roles: []
+}
 
-// const newUser = Object.assign({}, user);
-// user.name = 'NewUser';
-// console.log(user);
-// console.log( newUser);
+function addRole(user, role) {
+    if (role == 'admin') {
+        const message = 'Mistake';
+        console.log(message);
+        return user;
+    }
+    user.roles.push(role);
+    console.log(successMessge);
+
+    function logRoles() {
+        console.log(user.roles);
+    }
+    logRoles();
+    return user;
+}
+
+console.log(addRole(user, 'dev'))
 
 
-const newUser2 = {
-    ...user
-};
-
-user.name = "NewUser";
-console.log(user);
-console.log(newUser2);
