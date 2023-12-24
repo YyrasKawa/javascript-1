@@ -20,11 +20,3 @@ function inputChaged(e) {
   }
 }
 
-const panelText = "Панель";
-const panelClass = 'button';
- const newElement = document.createElement('div');
- newElement.setAttribute('user-id', 1);
- newElement.classList.add('panel')
-//  newElement.innerText = 'Button';
-newElement.innerHTML = `<button class="${panelClass}">${panelText}</but`;
- document.querySelector('.test').appendChild(newElement); 
