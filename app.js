@@ -1,17 +1,18 @@
-const cities = {
-    msk: {
-        temp: {
-              celcius: 25
-        }
-    },
-    spb: {
+const user = {
+    name: 'Anton',
+    id: 1
+};
 
-    }
-}
+// const newUser = Object.assign({}, user);
+// user.name = 'NewUser';
+// console.log(user);
+// console.log( newUser);
 
-const city = 'spb';
-if (cities[city] != undefined && cities[city].temp != undefined) {
-    console.log(cities[city].temp.celcius);
-}
 
-console.log(cities[city]?.temp?.celcius);
+const newUser2 = {
+    ...user
+};
+
+user.name = "NewUser";
+console.log(user);
+console.log(newUser2);
