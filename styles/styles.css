@@ -1,3 +1,35 @@
 * {
 	box-sizing: border-box;
 }
+
+body {
+	font-family: 'Comfortaa', cursive;
+	margin: 0;
+	background-color: #f3f6fd;
+}
+
+.app {
+	display: flex;
+}
+
+.logo {
+	margin-bottom: 50px;
+}
+
+.panel {
+	background: white;
+	min-height: 100vh;
+	padding: 30px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.menu__list {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
